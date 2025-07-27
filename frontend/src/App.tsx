@@ -28,21 +28,24 @@ export default function App() {
     try {
       setLoading(true);
 
-      const response = await fetch("http://localhost:3000/subscribe", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ email }),
-      });
+      const response = await fetch(
+        "https://moodmesh-landing.onrender.com/subscribe",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ email }),
+        }
+      );
 
       await response.json();
 
       if (response.status === 201) {
         setModalType("success");
         setShowModal(true);
-        setShowConfetti(true); 
-        setTimeout(()=>setShowConfetti(false),8000);
+        setShowConfetti(true);
+        setTimeout(() => setShowConfetti(false), 8000);
       } else if (response.status === 409) {
         setModalType("exists");
         setShowModal(true);
@@ -62,7 +65,6 @@ export default function App() {
   const closeModal = () => {
     setShowModal(false);
     setModalType("");
-    
   };
 
   useEffect(() => {

@@ -76,7 +76,7 @@ export default function App() {
   }, []);
 
   return (
-    <div className="relative w-full h-screen bg-[#0e0f11] text-white flex items-center justify-center px-4 overflow-hidden">
+    <div className="relative w-full h-screen text-white flex items-center justify-center px-4 overflow-hidden">
       {/* 🎉 Confetti Layer */}
       {showConfetti && (
         <div className="fixed inset-0 z-[70] pointer-events-none">

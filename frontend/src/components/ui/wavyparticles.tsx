@@ -26,7 +26,7 @@ const WavyParticles: React.FC<WavyParticlesProps> = ({ children }) => {
           enable: true,
         },
         background: {
-          color: "#042136",
+          color: "#0e0f11",
         },
         particles: {
           number: {

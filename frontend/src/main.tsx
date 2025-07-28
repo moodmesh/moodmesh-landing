@@ -14,6 +14,7 @@ createRoot(document.getElementById("root")!).render(
     <WavyParticles>
       <Routes>
         <Route path="/landing" element={<App/>}></Route>
+        <Route path="/" element={<App/>}/>
         <Route path="*" element={<Navigate to="/landing" replace/>}/>
       </Routes>
     </WavyParticles>

@@ -7,7 +7,7 @@ const connectDB = async (mongodb_cluster_url)=>{
         return true;
 
     } catch(err){
-       console.error("❌ monodb connection failed", err.message);
+       console.error("❌ mongodb connection failed", err.message);
        process.exit(1);
     }
 }
